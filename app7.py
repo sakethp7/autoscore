@@ -22,7 +22,7 @@ import time
 import re
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
 
 # Initialize Gemini client
 client = None
@@ -1210,3 +1210,4 @@ QUESTION-WISE SCORES
 if __name__ == "__main__":
 
     main()
+
