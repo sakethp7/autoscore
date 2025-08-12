@@ -1,0 +1,72 @@
+[
+  {
+    "question_number": 1,
+  "question": "$$ \\text{If } P(A) = \\frac{7}{13},\\ P(B) = \\frac{9}{13} \\text{ and } P(A \\cap B) = \\frac{4}{13},\\ \\text{evaluate } P(A \\mid B). $$",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 2
+  },
+  {
+    "question_number": 2,
+    "question": "A family has two children. What is the probability that both the children are boys given that at least one of them is a boy?",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 2
+  },
+  {
+    "question_number": 3,
+    "question": "Ten cards numbered 1 to 10 are placed in a box, mixed thoroughly and one card is drawn randomly. If it is known that the number on the drawn card is more than 3, what is the probability that it is an even number?",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 2
+  },
+  {
+    "question_number": 4,
+    "question": "A die is thrown twice and the sum of the numbers appearing is observed to be 6. What is the conditional probability that the number 4 has appeared at least once?",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 4
+  },
+  {
+    "question_number": 5,
+    "question": "A die is thrown. If E is the event ‘the number appearing is a multiple of 3’ and F is the event ‘the number appearing is even’, find whether E and F are independent.",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 2
+  },
+  {
+    "question_number": 6,
+    "question": "An unbiased die is thrown twice. Let event A be ‘odd number on the first throw’ and event B be ‘odd number on the second throw’. Check the independence of events A and B.",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 4
+  },
+  {
+    "question_number": 7,
+    "question": "Three coins are tossed simultaneously. Consider the events: E ‘three heads or three tails’, F ‘at least two heads’, and G ‘at most two heads’. Of the pairs (E,F), (E,G), and (F,G), which are independent and which are dependent?",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 6
+  },
+  {
+    "question_number": 8,
+    "question": "If A and B are two independent events, then the probability of occurrence of at least one of A and B is given by 1 – P(A′) P(B′).",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 2
+  },
+  {
+    "question_number": 9,
+    "question": "Bag I contains 3 red and 4 black balls while Bag II contains 5 red and 6 black balls. One ball is drawn at random from one of the bags and it is found to be red. Find the probability that it was drawn from Bag II.",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 6
+  },
+  {
+    "question_number": 10,
+    "question": "Given three identical boxes I, II and III, each containing two coins. Box I has two gold coins, Box II has two silver coins, and Box III has one gold and one silver coin. A person chooses a box at random and takes out a coin. If the coin is gold, what is the probability that the other coin in the box is also gold?",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 6
+  }
+]

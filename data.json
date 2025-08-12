@@ -1,0 +1,58 @@
+[
+  {
+    "question_number": 1,
+    "question": "In a right triangle ABC, right-angled at B, if tan A = 1, then verify that 2 sin A cos A = 1.",
+    "has_diagram": true,
+    "image_path": "1.jpeg",
+    "marks": 2
+  },
+  {
+    "question_number": 2,
+    "question": "In below Fig, find tan P – cot R.",
+    "has_diagram": true,
+    "image_path": "2.jpeg",
+    "marks": 2
+  },
+  {
+    "question_number": 3,
+    "question": "If sin A = 3 / 4, calculate cos A and tan A.",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 2
+  },
+  {
+    "question_number": 4,
+    "question": "In OPQ, right-angled at P, OP = 7 cm and OQ – PQ = 1 cm. Determine the values of sin Q and cos Q.",
+    "has_diagram": true,
+    "image_path": "4.jpeg",
+    "marks": 4
+  },
+  {
+    "question_number": 5,
+    "question": "If ∠B and ∠Q are acute angles such that sin B = sin Q, then prove that ∠B = ∠Q.",
+    "has_diagram": true,
+    "image_path": "5.jpeg",
+    "marks": 4
+  },
+  {
+    "question_number": 6,
+    "question": "Prove that sec A (1 – sin A)(sec A + tan A) = 1.",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 4
+  },
+  {
+    "question_number": 7,
+    "question": "Evaluate the following: (i) sin 60° × cos 30° + sin 30° × cos 60° (ii) 2 tan² 45° + cos² 30° – sin² 60° (iii) cos 45° ÷ sec 30° + cosec 30° (iv) (sin 30° + tan 45° – cosec 60°) ÷ (sec 30° + cos 60° + cot 45°) (v) (5 cos² 60° + 4 sec² 30° – tan² 45°) ÷ (sin² 30° + cos² 30°)",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 6
+  },
+  {
+    "question_number": 8,
+    "question": "Evaluate the following: (i) Simplify and identify the trigonometric value of: 2 tan 30° / (1 + tan 30°) (ii) Evaluate and simplify: (1 – tan² 45°) / (1 + tan² 45°) (iii) Simplify and identify the trigonometric value of: 2 tan 30° / (1 – tan² 30°)",
+    "has_diagram": false,
+    "image_path": null,
+    "marks": 6
+  }
+]
