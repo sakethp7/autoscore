@@ -316,7 +316,7 @@ def extract_content_from_page_thread(page_data: tuple) -> Dict:
         
         # Generate response
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             contents=contents,
             config=types.GenerateContentConfig()
         )
@@ -1210,4 +1210,5 @@ QUESTION-WISE SCORES
 if __name__ == "__main__":
 
     main()
+
 
