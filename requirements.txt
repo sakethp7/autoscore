@@ -3,4 +3,5 @@ streamlit
 pandas
 langsmith
 pymupdf
+pypdf2
 pillow
