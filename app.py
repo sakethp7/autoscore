@@ -8,3 +8,6 @@ def root():
 @app.get("/hello")
 def root3():
     return {"message": "AutoScore FastAPI running!"}
+@app.get("/hi")
+def root2():
+    return {"message": "AutoScore FastAPI running!"}
