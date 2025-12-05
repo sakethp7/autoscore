@@ -6,5 +6,5 @@ app = FastAPI()
 def root():
     return {"message": "AutoScore FastAPI running!"}
 @app.get("/hello")
-def root():
+def root3():
     return {"message": "AutoScore FastAPI running!"}
