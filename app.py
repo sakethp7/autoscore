@@ -417,7 +417,7 @@ Follow these steps in order:
         logger.error(f"[{request_id}] Error extracting text from page {page_num + 1}: {e}")
         return f"<page{page_num + 1}>\nError extracting text: {str(e)}\n</page{page_num + 1}>"
 
-async def evaluate_answer(llm: ChatGoogleGenerativeAI,max_marks:str,answer:str,time_given:str,student_time, question: str, question_images: list, extracted_answer: str, request_id: str) -> Result:
+async def evaluate_answer(llm: ChatGoogleGenerativeAI,question: str, question_images: list, extracted_answer: str, request_id: str) -> Result:
     """Phase 2: Evaluates the extracted answer (async) with Chain-of-Thought reasoning."""
 
     evaluation_prompt = f"""## EVALUATION TASK
@@ -427,11 +427,10 @@ Evaluate the following student answer using Chain-of-Thought reasoning.
 - **Question:** {question}
 - **Student's Answer:** {extracted_answer}
 
-- Reference solution:{answer}
 
-- Max marks:{max_marks}
-- Time given:{time_given}
-- Student's time:{student_time}
+
+- Max marks:5
+
 ## CHAIN-OF-THOUGHT EVALUATION (Follow these steps exactly)
 
 ### Step 1: Question Analysis
@@ -769,18 +768,14 @@ async def autoscore(
     question: str = Form(..., description="Question text"),
     question_images: list[UploadFile] | None = File(default=None, description="Optional question images (1-2 images)"),
     answer_images: list[UploadFile] = File(..., description="Student answer images"),
-    answer:str=Form(...),
-    max_marks:str=Form(...),
-    student_time:str=Form(...),
-    time_given:str=Form(...)
+    
 
 ):
     """Main endpoint for student answer evaluation with proper request isolation."""
     # Generate unique request ID for tracking and isolation
     request_id = str(uuid.uuid4())[:8]
     logger.info(f"[{request_id}] Starting autoscore request")
-    logger.info(question)
-    logger.info(f"Time Taken:{student_time}")
+  
     try:
         # Read files concurrently and convert to PIL Images
         question_image_objects_tasks = [
@@ -821,7 +816,7 @@ async def autoscore(
             logger.info(f"[{request_id}] Acquired LLM instance for evaluation")
 
             evaluation_result = await evaluate_answer(
-                 llm_eval,max_marks,answer,time_given,student_time, question, question_image_objects, all_extracted_text, request_id
+                 llm_eval, question, question_image_objects, all_extracted_text, request_id
             )
             logger.info(f"[{request_id}] Evaluation completed")
 
