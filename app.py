@@ -2,6 +2,6 @@ from fastapi import FastAPI
 
 app=FastAPI()
 
-app.post("/score")
+app.get("/score")
 def score():
     return {"score": 42}  # Placeholder implementation
