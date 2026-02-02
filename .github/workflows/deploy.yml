@@ -1,32 +1,22 @@
-name: Deploy to EC2
+- name: Deploy to EC2
+  uses: appleboy/ssh-action@v0.1.10
+  with:
+    host: ${{ secrets.EC2_HOST }}
+    username: ubuntu
+    key: ${{ secrets.EC2_KEY }}
+    script: |
+      cd /home/ubuntu/autoscore
+      echo "===== BEFORE PULL ====="
+      git branch
+      git status
+      git log -1
 
-on:
-  push:
-    branches: ["main"]
+      git pull origin main
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
+      echo "===== AFTER PULL ====="
+      git status
+      git log -1
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Run tests (skipped if none)
-        run: pytest || echo "No tests"
-
-      - name: Deploy to EC2
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ubuntu
-          key: ${{ secrets.EC2_KEY }}
-          script: |
-            cd /home/ubuntu/autoscore
-            git pull
-            source venv/bin/activate
-            pip install -r requirements.txt
-            sudo systemctl restart autoscore.service
+      source venv/bin/activate
+      pip install -r requirements.txt
+      sudo systemctl restart autoscore.service
